@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.w3.org/2001/XMLSchema"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+    <bean id="Vehicle" class="org.example.Car">
+<!--        <constructor-arg index="0" ref="Tire"/>-->
+        <property name="tire" ref="Tire"/>
+    </bean>
+
+    <bean id="Tire" class="org.example.Tire">
+<!--        <constructor-arg index="0" value="MRF"/>-->
+<!--        <constructor-arg index="1" value="25"/>-->
+        <property name="brandName" value="MRF"/>
+        <property name="size" value="25"/>
+    </bean>
+
+
+
+
+
+    <bean id="student" class="org.assignment.Student">
+        <constructor-arg index="0" value="25"/>
+        <constructor-arg index="1" value="Rahul"/>
+        <constructor-arg index="2">
+            <list>
+                <ref bean="mobile"/>
+                <ref bean="landline"/>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3" ref="Address" />
+    </bean>
+
+
+    <bean id="mobile" class="org.assignment.Phone">
+        <constructor-arg index="0" value="mobile"/>
+    </bean>
+
+    <bean id="landline" class="org.assignment.Phone">
+        <constructor-arg index="0" value="landline"/>
+    </bean>
+
+    <bean id="Address" class="org.assignment.Address">
+        <constructor-arg index="0" value="Main Street"/>
+        <constructor-arg index="1" value="New York"/>
+        <constructor-arg index="2" value="New York"/>
+        <constructor-arg index="3" value="44444444"/>
+        <constructor-arg index="4" value="USA"/>
+    </bean>
+
+</beans>
