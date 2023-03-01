@@ -1,19 +1,19 @@
-package org.example2;
+package org.examples.example1;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Tire {
     private String brandName;
     private int size;
 
+//    public Tire(String brandName, int size) {
+//        this.brandName = brandName;
+//        this.size = size;
+//    }
+
     public void setBrandName(String brandName) {
-        System.out.println("Tire.setBrandName() called");
         this.brandName = brandName;
     }
 
     public void setSize(int size) {
-        System.out.println("Tire.setSize() called");
         this.size = size;
     }
 

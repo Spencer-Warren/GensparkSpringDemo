@@ -7,12 +7,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
 
-    <bean id="Vehicle" class="org.example.Car">
+    <bean id="Vehicle" class="org.examples.example1.Car">
 <!--        <constructor-arg index="0" ref="Tire"/>-->
         <property name="tire" ref="Tire"/>
     </bean>
 
-    <bean id="Tire" class="org.example.Tire">
+    <bean id="Tire" class="org.examples.example1.Tire">
 <!--        <constructor-arg index="0" value="MRF"/>-->
 <!--        <constructor-arg index="1" value="25"/>-->
         <property name="brandName" value="MRF"/>

@@ -1,4 +1,4 @@
-package org.example;
+package org.examples.example1;
 
 
 import org.springframework.context.ApplicationContext;
